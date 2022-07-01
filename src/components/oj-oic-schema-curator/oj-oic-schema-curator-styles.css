@@ -1,0 +1,22 @@
+/* This file is where css selectors for the component go.
+   There will be hard coded properties and properties controlled by variables, for example
+
+   oj-oic-schema-curator .oj-oic-schema-curator-value-text {
+   color: var(--oj-oic-schema-curator-value-text-color);
+   display: inline-block;
+	 }
+*/
+
+oj-oic-schema-curator:not(.oj-complete){
+  visibility: hidden;
+}
+
+oj-oic-schema-curator{
+	min-height: 50px;
+	width: 50px;
+}
+
+oj-oic-schema-curator[hidden]
+{
+  display: none;
+}

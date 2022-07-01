@@ -29,6 +29,9 @@
       ],
       "oj-hello-world/*": [
         "./src/components/oj-hello-world/*"
+      ],
+      "oj-oic-schema-curator/*": [
+        "./src/components/oj-oic-schema-curator/*"
       ]
     },
     "declaration": true,
