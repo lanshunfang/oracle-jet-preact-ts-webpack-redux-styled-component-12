@@ -1,7 +1,7 @@
 import { h } from "preact";
 
 // import { OjOicSchemaCurator } from '../oj-oic-schema-curator/loader';
-import Counter from '../Counter/Counter';
+import Counter from '../counter/counter';
 
 export function Content() {
   return (

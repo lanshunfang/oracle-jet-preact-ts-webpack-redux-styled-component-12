@@ -1,3 +1,10 @@
+import "ojs/ojbutton";
+import "ojs/ojformlayout";
+import "ojs/ojinputtext";
+import "ojs/ojknockout";
+import "ojs/ojlabel";
+
+
 import { h } from "preact";
 
 import { useState } from 'preact/hooks';
@@ -6,19 +13,27 @@ import styled from 'styled-components';
 
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
 
-import componentStrings = require("ojL10n!./resources/nls/CounterStrings");
+import componentStrings = require("ojL10n!./resources/nls/counter-strings");
 
 import {
   decrement,
   increment, incrementAsync, incrementByAmount, incrementIfOdd,
   selectCount
-} from './counterSlice';
+} from './counter-slice';
 
 const Title = styled.h2`
   font-size: 1.5em;
   text-align: center;
   color: blue;
 `;
+
+
+const Label = styled.h4`
+  font-size: 2em;
+  text-align: center;
+  color: red;
+`;
+
 
 
 export function Counter(props: {
@@ -33,43 +48,43 @@ export function Counter(props: {
   return (
     <div>
       <Title>My name is {props.name}. {JSON.stringify(componentStrings)}</Title>
-      <div>
-        <button
-          aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
-        >
-          -
-        </button>
-        <span>{count}</span>
-        <button
+      
+      <oj-form-layout max-columns="3" direction="column">
+
+        <oj-button id="button1"
+          onClick={() => dispatch(decrement())}>-</oj-button>
+
+        <Label>{count}</Label>
+        <oj-button
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
         >
           +
-        </button>
-      </div>
-      <div>
-        <input
+        </oj-button>
+      </oj-form-layout>
+      <oj-form-layout max-columns="2" direction="row">
+
+        <oj-input-text
           aria-label="Set increment amount"
           value={incrementAmount}
-          onChange={(e) => setIncrementAmount((e.target as any).value)}
+          onvalueChanged={(e) => setIncrementAmount((e.target as any).value)}
         />
-        <button
+        <oj-button
           onClick={() => dispatch(incrementByAmount(incrementValue))}
         >
           Add Amount
-        </button>
-        <button
+        </oj-button>
+        <oj-button
           onClick={() => dispatch(incrementAsync(incrementValue))}
         >
           Add Async
-        </button>
-        <button
+        </oj-button>
+        <oj-button
           onClick={() => dispatch(incrementIfOdd(incrementValue))}
         >
           Add If Odd
-        </button>
-      </div>
+        </oj-button>
+      </oj-form-layout >
     </div>
   );
 }

@@ -41,7 +41,7 @@
         "./src/components/oj-hello-world/*"
       ],
           "Counter/*": [
-            "./src/components/Counter/*"
+            "src/components/counter/*"
           ]
       
     },
