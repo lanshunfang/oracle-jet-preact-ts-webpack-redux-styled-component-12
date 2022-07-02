@@ -5,7 +5,7 @@ import componentStrings = require("ojL10n!./resources/nls/oj-oic-schema-curator-
 function PreactOicSchemaCurator(props: {
   name: string;
 }) {
-  return <div>My name is {props.name}.</div>;
+  return <div>My name is {props.name}. {JSON.stringify(componentStrings)}</div>;
 }
 
 export default PreactOicSchemaCurator;

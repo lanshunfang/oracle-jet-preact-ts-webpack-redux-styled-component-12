@@ -19,7 +19,9 @@
     ],
     "paths": {
       "ojs/*": [
-        "./node_modules/@oracle/oraclejet/dist/types/*"
+        // "./node_modules/@oracle/oraclejet/dist/js/libs/oj/debug/*",
+
+        "./node_modules/@oracle/oraclejet/dist/types/*",
       ],
       "react": [
         "./node_modules/preact/compat/src/index.d.ts"
@@ -35,7 +37,7 @@
       ]
     },
     "declaration": true,
-    "noEmitOnError": true,
+    // "noEmitOnError": true,
     "experimentalDecorators": true,
     "skipLibCheck": true,
     "rootDir": "./src",

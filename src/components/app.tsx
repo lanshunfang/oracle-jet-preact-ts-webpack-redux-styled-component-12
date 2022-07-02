@@ -1,9 +1,9 @@
+import Context from "ojs/ojcontext";
 import { customElement, ExtendGlobalProps } from "ojs/ojvcomponent";
-import { h, Component, ComponentChild } from "preact";
-import Context = require("ojs/ojcontext");
+import { Component, ComponentChild, h } from "preact";
+import { Content } from "./content/index";
 import { Footer } from "./footer";
 import { Header } from "./header";
-import { Content } from "./content/index";
 
 type Props = {
   appName?: string;

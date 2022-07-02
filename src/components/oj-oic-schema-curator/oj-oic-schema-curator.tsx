@@ -669,7 +669,7 @@ type Props = {
  * @ojmetadata description "A translatable high-level description for the component"
 */
 @customElement("oj-oic-schema-curator")
-export class OjOicSchemaCurator extends Component < ExtendGlobalProps < Props >> {
+export class OjOicSchemaCurator extends Component<ExtendGlobalProps < Props >> {
   static defaultProps: Partial < Props > = {
   message: "Hello from oj-oic-schema-curator!"
 };
