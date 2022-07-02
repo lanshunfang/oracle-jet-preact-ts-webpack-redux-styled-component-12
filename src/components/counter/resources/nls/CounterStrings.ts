@@ -1,6 +1,6 @@
 export = {
   "root": {
-    "oj-oic-schema-curator" : {
+    "Counter" : {
     		"sampleString": "The strings file can be used to manage translatable resources"
     }
   }

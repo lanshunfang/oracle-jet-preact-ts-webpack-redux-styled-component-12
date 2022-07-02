@@ -5,6 +5,9 @@ import { Content } from "./content/index";
 import { Footer } from "./footer";
 import { Header } from "./header";
 
+import { Provider } from 'react-redux';
+import { store } from '../app/store';
+
 type Props = {
   appName?: string;
   userLogin?: string;
@@ -19,14 +22,16 @@ export class App extends Component<ExtendGlobalProps<Props>> {
 
   render(props: ExtendGlobalProps<Props>): ComponentChild {
     return (
-      <div id="appContainer" class="oj-web-applayout-page">
-        <Header
-          appName={props.appName} 
-          userLogin={props.userLogin} 
-        />
-        <Content />
-        <Footer />
-      </div>
+      <Provider store={store}>
+        <div id="appContainer" class="oj-web-applayout-page">
+          <Header
+            appName={props.appName} 
+            userLogin={props.userLogin} 
+          />
+          <Content />
+          <Footer />
+        </div>
+      </Provider>
     );
   }
 

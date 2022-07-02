@@ -4,6 +4,7 @@
   "description": "An Oracle JavaScript Extension Toolkit(JET) web app",
   "dependencies": {
     "@oracle/oraclejet": "~12.1.0",
+    "@reduxjs/toolkit": "^1.8.3",
     "react-redux": "^8.0.2",
     "styled-components": "^5.3.5"
   },
