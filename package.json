@@ -42,8 +42,11 @@
   },
   "private": true,
   "scripts": {
-    "start": "ojet serve",
-    "build": "ojet build"
+    "config-jet-webpack": "export JET_WP_PATH=\"node_modules/@oracle/oraclejet-tooling/lib/webpack/\"; cd $JET_WP_PATH; mv webpack.development.js webpack.development.bak.js; cd -; cp webpack.development.js $JET_WP_PATH/",
+    "start": "npm run config-jet-webpack; ojet serve",
+    "serve": "npm run start",
+    "dev": "npm run start",
+    "build": "npm run config-jet-webpack; ojet build"
   },
   "resolutions": {
     "styled-components": "^5"

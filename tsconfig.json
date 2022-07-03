@@ -5,10 +5,11 @@
     "target": "es6",
     "module": "amd",
     "moduleResolution": "node",
+    "sourceMap": true,
     "jsx": "react",
     "jsxFactory": "h",
     "lib": [
-      "es2015",
+      "es2017",
       "dom",
       "esnext.asynciterable"
     ],
