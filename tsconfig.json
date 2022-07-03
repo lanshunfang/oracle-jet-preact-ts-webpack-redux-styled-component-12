@@ -38,12 +38,10 @@
       // "react-dom": [
       //   "./node_modules/preact/compat/src/index.d.ts"
       // ],
-      "oj-hello-world/*": [
-        "./src/components/oj-hello-world/*"
-      ],
-          "Counter/*": [
-            "src/components/counter/*"
-          ]
+  
+        "Counter/*": [
+          "src/components/counter/*"
+        ]
       
     },
     "declaration": true,

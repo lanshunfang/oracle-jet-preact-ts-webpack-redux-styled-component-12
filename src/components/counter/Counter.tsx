@@ -4,16 +4,11 @@ import "ojs/ojinputtext";
 import "ojs/ojknockout";
 import "ojs/ojlabel";
 
-
 import { h } from "preact";
-
 import { useState } from 'preact/hooks';
-
 import styled from 'styled-components';
 
 import { useAppDispatch, useAppSelector } from '../../app/hooks';
-
-import componentStrings = require("ojL10n!./resources/nls/counter-strings");
 
 import {
   decrement,
@@ -47,7 +42,7 @@ export function Counter(props: {
 
   return (
     <div>
-      <Title>My name is {props.name}. {JSON.stringify(componentStrings)}</Title>
+      <Title>My name is {props.name}</Title>
       
       <oj-form-layout max-columns="3" direction="column">
 
