@@ -1,5 +1,5 @@
 {
-  "name": "oic-adapter-poc-webpack",
+  "name": "oracle-jet-preact-ts-webpack-redux-styled-component-12",
   "version": "1.0.0",
   "description": "An Oracle JavaScript Extension Toolkit(JET) web app",
   "dependencies": {
